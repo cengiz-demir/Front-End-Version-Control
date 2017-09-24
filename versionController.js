@@ -88,7 +88,7 @@ function WriteToTop(mypath){
 // Not Async olmamasi gerekiyor! 
 // https://stackoverflow.com/questions/21253019/change-a-file-using-node-js
 
-function readWriteSync(addVersion, whichFile) {
+function WriteAnyWhere(addVersion, whichFile) {
 
 	var findingElem = addVersion.split('/');
 	var myElem = findingElem.pop();
@@ -127,5 +127,5 @@ function checkYourPath(param){
 
 WriteToTop(cssFile);
 WriteToTop(jsFile);
-readWriteSync(cssFile, layoutFile);
-readWriteSync(jsFile, layoutFile);
+WriteAnyWhere(cssFile, layoutFile);
+WriteAnyWhere(jsFile, layoutFile);
